@@ -69,15 +69,12 @@ export default function Phonebook({ OnSaveContacts }) {
             value={number}
             ref={register({
               required: true,
-              minLength: 7,
               pattern: /^[0-9]+$/gm,
+              minLength: 7,
             })}
             onChange={handleChange}
           />
         </label>
-        {errors.number && errors.number.type === "minLength" && (
-          <p className={s.textError}>Number too short</p>
-        )}
 
         {errors.number && errors.number.type === "required" && (
           <p className={s.textError}>This is required </p>
@@ -85,6 +82,10 @@ export default function Phonebook({ OnSaveContacts }) {
 
         {errors.number && errors.number.type === "pattern" && (
           <p className={s.textError}>There must be numbers</p>
+        )}
+
+        {errors.number && errors.number.type === "minLength" && (
+          <p className={s.textError}>Number too short</p>
         )}
 
         <button className={s.btn} type="submit">
