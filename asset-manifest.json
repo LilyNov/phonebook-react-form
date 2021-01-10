@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/phonebook-react-form/static/css/main.db89ad92.chunk.css",
+    "main.css": "/phonebook-react-form/static/css/main.778515d4.chunk.css",
     "main.js": "/phonebook-react-form/static/js/main.071d5eea.chunk.js",
     "main.js.map": "/phonebook-react-form/static/js/main.071d5eea.chunk.js.map",
     "runtime-main.js": "/phonebook-react-form/static/js/runtime-main.a6b5fbb9.js",
@@ -8,13 +8,13 @@
     "static/js/2.7f950840.chunk.js": "/phonebook-react-form/static/js/2.7f950840.chunk.js",
     "static/js/2.7f950840.chunk.js.map": "/phonebook-react-form/static/js/2.7f950840.chunk.js.map",
     "index.html": "/phonebook-react-form/index.html",
-    "static/css/main.db89ad92.chunk.css.map": "/phonebook-react-form/static/css/main.db89ad92.chunk.css.map",
+    "static/css/main.778515d4.chunk.css.map": "/phonebook-react-form/static/css/main.778515d4.chunk.css.map",
     "static/js/2.7f950840.chunk.js.LICENSE.txt": "/phonebook-react-form/static/js/2.7f950840.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a6b5fbb9.js",
     "static/js/2.7f950840.chunk.js",
-    "static/css/main.db89ad92.chunk.css",
+    "static/css/main.778515d4.chunk.css",
     "static/js/main.071d5eea.chunk.js"
   ]
 }
