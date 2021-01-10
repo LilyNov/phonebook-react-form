@@ -1,26 +1,26 @@
-import { useState, useEffect } from 'react';
-import { v1 as uuidv1 } from 'uuid';
-import s from './App.module.css';
-import ContactForm from './ContactForm/ContactForm';
-import Filter from './Filter/Filter';
-import ContactList from './ContactList/ContactList';
-import PropTypes from 'prop-types';
+import { useState, useEffect } from "react";
+import { v1 as uuidv1 } from "uuid";
+import s from "./App.module.css";
+import ContactForm from "./ContactForm/ContactForm";
+import Filter from "./Filter/Filter";
+import ContactList from "./ContactList/ContactList";
+import PropTypes from "prop-types";
 
 const defaultContacts = [
-  { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
-  { id: 'id-2', name: 'Hermione Kline', number: '443-89-12' },
-  { id: 'id-3', name: 'Eden Clements', number: '645-17-79' },
-  { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
+  { id: "id-1", name: "Rosie Simpson", number: "459-12-56" },
+  { id: "id-2", name: "Hermione Kline", number: "443-89-12" },
+  { id: "id-3", name: "Eden Clements", number: "645-17-79" },
+  { id: "id-4", name: "Annie Copeland", number: "227-91-26" },
 ];
 
 export default function App() {
   const [contacts, setContacts] = useState(
-    JSON.parse(window.localStorage.getItem('contacts')) ?? defaultContacts,
+    JSON.parse(window.localStorage.getItem("contacts")) ?? defaultContacts
   );
-  const [filter, setFilter] = useState('');
+  const [filter, setFilter] = useState("");
 
   useEffect(() => {
-    window.localStorage.setItem('contacts', JSON.stringify(contacts));
+    window.localStorage.setItem("contacts", JSON.stringify(contacts));
   }, [contacts]);
 
   const formSubmitHandler = (name, number) => {
@@ -31,8 +31,8 @@ export default function App() {
     };
 
     //проверяем дублируется контакт или нет при добавлении
-    const getContacts = contacts.map(contact =>
-      contact.name.toLocaleLowerCase(),
+    const getContacts = contacts.map((contact) =>
+      contact.name.toLocaleLowerCase()
     );
 
     console.log(getContacts);
@@ -42,21 +42,21 @@ export default function App() {
     if (isGetContactAlready) {
       alert(`${name} is already in contacts!`);
     } else {
-      setContacts(prevState => [...prevState, myContacts]);
+      setContacts((prevState) => [...prevState, myContacts]);
     }
   };
 
-  const deleteContact = id => {
-    setContacts(contacts.filter(contact => contact.id !== id));
+  const deleteContact = (id) => {
+    setContacts(contacts.filter((contact) => contact.id !== id));
   };
 
-  const handleChangeFilter = e => {
+  const handleChangeFilter = (e) => {
     setFilter(e.currentTarget.value);
   };
 
   const filterContactsByName = () => {
-    return contacts.filter(contact =>
-      contact.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase()),
+    return contacts.filter((contact) =>
+      contact.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase())
     );
   };
 
@@ -77,8 +77,8 @@ export default function App() {
 
 App.defaultProps = {
   contacts: [],
-  name: '',
-  number: '',
+  name: "",
+  number: "",
 };
 
 App.propTypes = {
@@ -87,6 +87,6 @@ App.propTypes = {
       id: PropTypes.string.isRequired,
       name: PropTypes.string,
       number: PropTypes.string,
-    }),
+    })
   ),
 };

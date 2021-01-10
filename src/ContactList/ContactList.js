@@ -1,7 +1,7 @@
-import React from 'react';
-import { GoOrganization } from 'react-icons/go';
-import { RiDeleteBin3Fill } from 'react-icons/ri';
-import s from '../ContactList/ContactList.module.css';
+import React from "react";
+import { GoOrganization } from "react-icons/go";
+import { RiDeleteBin3Fill } from "react-icons/ri";
+import s from "../ContactList/ContactList.module.css";
 
 const ContactList = ({ contacts, ondeleteContact }) => {
   return (
@@ -13,7 +13,7 @@ const ContactList = ({ contacts, ondeleteContact }) => {
             <span className={s.text}>{name}: </span>
             <span className={s.text}>{number}</span>
             <button className={s.btn} onClick={() => ondeleteContact(id)}>
-              <RiDeleteBin3Fill value={{ size: 10 }} />{' '}
+              <RiDeleteBin3Fill value={{ width: 20 }} />{" "}
             </button>
           </li>
         ))}
